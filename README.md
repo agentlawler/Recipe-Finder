@@ -3,6 +3,7 @@
 ![DHWwBF](https://i.pinimg.com/originals/72/07/bb/7207bb4267b5a48168af9117dfbc86ab.jpg)
 
 Have you ever found yourself looking at the ingredients in your kitchen, at a loss at what you could possibly whip up? wonder no longer! this website is here to help you. It has two major functions:
+
     1. Access a recipe database and list and display them in an easy to access format
 
     2. Enter in ingredients in a submission form to filter through possible recipse available to them
