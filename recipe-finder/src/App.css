@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+.navBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #49111c;
+  height: 200px;
+  color: #f7f3e3;
+  text-decoration: none;
+  font-size: 30px;
+  margin-left: 1em;
+  margin-top: 3em;
+}
+.bannerAd{ 
+  background-color: black;
+  width: 200px;
+}
+.recipeDisplay{
+  margin-left: 7em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width:80%;
+  
+  
+}
+.recipeCard {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 150px;
+  background-color: #a08280;
+}
+.recipeCard:hover {
+  transform: scale(1.01);
+}
+.recipePreview {
+  width: 120px;
+}
+
