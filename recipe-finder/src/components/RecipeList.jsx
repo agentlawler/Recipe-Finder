@@ -2,19 +2,19 @@ import { useNavigate } from "react-router-dom"
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
-const RecipeList = (props) => {
+const RecipeList = ({recipes}) => {
 
-    const [recipes, setRecipes] = useState([])
+    // const [recipes, setRecipes] = useState([])
 
-    useEffect(()=>{
-        const getRecipes = async () => {
-            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
-            console.log(response.data.meals)
-            setRecipes(response.data.meals)
-        }
+    // useEffect(()=>{
+    //     const getRecipes = async () => {
+    //         const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
+    //         console.log(response.data.meals)
+    //         setRecipes(response.data.meals)
+    //     }
 
-        getRecipes()
-    }, [])
+    //     getRecipes()
+    // }, [])
 
     let navigate = useNavigate()
 
@@ -29,7 +29,7 @@ const RecipeList = (props) => {
     return(
             <div className="recipePage">
                 
-                    <img src='https://www.hornmatters.com/wp-content/uploads/2016/01/banner-adplaceholder.png' alt='bannerAd'/>
+                    <img src='https://lh6.googleusercontent.com/HW6PxLdAfMbKPpLpP-lIVhna5QnbskPTz_pLydSL5b7qrJ6X_3Vzq5bot8ad7GBZNbwy6eyBzxtjuWeUkeHdqgC9C36cuTC-2wGmVVNOs-peP5hfgjlQr4SAV-b04eXJ5SluB7b6' alt='bannerAd'/>
                 
             <h2>This is the recipe page</h2>
             <div className="recipeDisplay">

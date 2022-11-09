@@ -1,18 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .App {
   text-align: center;
   display: flex;
 }
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff686b;
+}
+
+img {
+  width: 600px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  
+}
+li {
+  list-style-type: none;
+}
+
 .navBar {
+  position: absolute;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   justify-content: space-evenly;
   background-color: #49111c;
-  height: 200px;
+  height: 150px;
+  width: 200px;
   color: #f7f3e3;
   text-decoration: none;
   font-size: 30px;
-  margin-left: 1em;
-  margin-top: 3em;
+  margin-top: 200px;
+  
 }
 .bannerAd{ 
   background-color: black;
@@ -27,6 +50,15 @@
   
   
 }
+
+.ingList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+}
+
 .recipeCard {
   padding: 1em;
   margin: 1em;
@@ -34,12 +66,21 @@
   justify-content: space-around;
   flex-direction: column;
   width: 150px;
-  background-color: #a08280;
+  background-color: #98727bdc;
 }
 .recipeCard:hover {
   transform: scale(1.01);
 }
 .recipePreview {
   width: 120px;
+}
+.link {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid #3c1212dc
+}
+
+.link:hover {
+  transform: scale(1.02)
 }
 
