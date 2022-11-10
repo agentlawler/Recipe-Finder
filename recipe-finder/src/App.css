@@ -9,38 +9,96 @@
 h1, h2 {
   font-family: 'Pacifico', cursive;
   color: #ff686b;
+  text-align: center;
 }
 
-img {
-  width: 600px;
-  height: 150px;
+.logo {
+  width:200px;
+  margin-bottom: -150px;
+}
+
+.homePage {
+  min-width: 800px;
+  
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.openTitle {
+  text-align: center;
+  display: flex;
+  justify-content: end;
+  
+  position: relative;
   
 }
+.farout {
+  width: 500px;
+  margin-left: auto;
+  text-align: end;
+  color: rgba(44, 8, 8, 0.873);
+}
+span {
+  font-size: larger;
+}
+.bck {
+  display: flex;
+  justify-content: end;
+  width: 40em;
+  margin-left: 210px;
+  border-radius: 50px;
+  
+}
+.instruct {
+  display: flex;
+  justify-content: end;
+  color: rgba(44, 8, 8, 0.873);
+}
+  
 li {
   list-style-type: none;
 }
 
 .navBar {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  justify-content: space-evenly;
+  position: fixed;
+  
   background-color: #49111c;
-  height: 150px;
+  height: 100%;
   width: 200px;
   color: #f7f3e3;
   text-decoration: none;
   font-size: 30px;
-  margin-top: 200px;
+}
+
+.linkBox {
+  margin-top: 150px;
+}
+
+.link {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid #3c1212dc
+}
+
+.link:hover {
+  transform: scale(1.02)
+}
+
+
+.recipePage {
+  width: 90%;
+  margin-left: auto;
+
+}
+
+.banner {
+  width: 65%;
+  height: 170px;
   
 }
-.bannerAd{ 
-  background-color: black;
-  width: 200px;
-}
+
 .recipeDisplay{
   margin-left: 7em;
   display: flex;
@@ -74,13 +132,23 @@ li {
 .recipePreview {
   width: 120px;
 }
-.link {
-  display: flex;
-  justify-content: space-evenly;
-  border: 2px solid #3c1212dc
+
+.detailHeader img{
+  width: 40em;
+  height: 20em;
+  object-fit: cover;
+  margin-left: 210px;
+  margin-top: 20px;
 }
 
-.link:hover {
-  transform: scale(1.02)
+.recipeInfo {
+  width: 40em;
+  margin: 0 auto;
+  margin-left: 210px;
+  text-align: center;
 }
 
+.ingList {
+  margin-left: auto;
+  margin-right: auto;
+}

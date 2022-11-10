@@ -8,6 +8,7 @@ import Home from './components/Home'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
 import FindRecipe from './components/FindRecipe'
+import SearchByMain from './components/SearchByMain'
 
 
 
@@ -20,7 +21,7 @@ function App() {
   useEffect(()=>{
       const getRecipes = async () => {
           const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
-          console.log(response.data.meals)
+          console.log(response)
           setRecipes(response.data.meals)
           
       }
@@ -42,7 +43,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/Recipes' element={<RecipeList recipes={recipes}/>}/>
           <Route path='/Recipes/:idMeal' element={ <RecipeDetails recipes={recipes}/>}/>
-          <Route path='/Finder' element={<FindRecipe recipes={recipes}/>}/>
+          {/* <Route path='/Finder' element={<FindRecipe recipes={recipes}/>}/> */}
+          <Route path='/ByMain' element={<SearchByMain recipes={recipes}/>}/>
         </Routes>
       </main>
     </div>

@@ -1,5 +1,6 @@
 import { useState } from "react"
-import RecipeList from "./RecipeList"
+
+import { useNavigate } from "react-router-dom"
 
 const FindRecipe = ({recipes}) => {
 
@@ -34,18 +35,26 @@ const FindRecipe = ({recipes}) => {
     }
 
      const searchFilter = () => {
+        let meals
         recipes.filter((recipe) => {
             console.log(recipe)
-            if (recipe.ingredients.includes(ingredients)){return(recipe)} 
+            if (recipe.ingredients.food.includes(ingredients)){return(recipe)} 
         })
      }  
 
-    console.log(ingredients)
-    //console.log(searchFilter())
+     let navigate = useNavigate()
+
+     const showRecipe = (recipe) => {
+         navigate(`${recipe.idMeal}`)
+     }
+ 
+
+    //console.log(ingredients)
+    
     return (
         <div>
             <div className="finderForm">
-                <img src='https://lh6.googleusercontent.com/HW6PxLdAfMbKPpLpP-lIVhna5QnbskPTz_pLydSL5b7qrJ6X_3Vzq5bot8ad7GBZNbwy6eyBzxtjuWeUkeHdqgC9C36cuTC-2wGmVVNOs-peP5hfgjlQr4SAV-b04eXJ5SluB7b6' alt='bannerAd'/>
+                
                 <h2>This is the finder page</h2>
                 <p>Instruction blurb</p>
                 <form onSubmit={handleSubmit}>
@@ -60,7 +69,20 @@ const FindRecipe = ({recipes}) => {
                 </form>
             </div>
             <div className="recipeBlock">
-                {/* this is where mapped recipes go */}
+                {/* {
+                    recipes.map((recipe, i) => {
+                        let recipeIng = Object.keys(recipe)
+                        const filt = recipeIng.filter((key) => key.startsWith('strIngredient'))
+                        console.log(filt)
+                        if recipe[filt[i]].includes(ingredients) 
+                        return ( 
+                        <div className='recipeCard' onClick={() => showRecipe(recipe)} key={recipe.strMeal}> 
+                            
+                            <img className="recipePreview" src={recipe.strMealThumb} alt={recipe.strMeal}/>
+                            <h3>{recipe.strMeal}</h3>
+                        </div>
+                    )})
+                } */}
             </div>
             <div className="addedIng">
                 <ul>
